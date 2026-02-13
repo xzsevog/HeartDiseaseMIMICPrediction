@@ -40,7 +40,7 @@ Nevertheless, it was decided to do the final training with XGB as it has more hi
 ## Hyperparameter Tuning
 Optuna, an automatic hyperparameter optimization framework, was utilized for hyperparameter tuning. It was applied to both the Random Forest and XGBoost models to systematically search for the optimal set of parameters that maximize the Area Under the Receiver Operating Characteristic Curve (AUC) through cross-validation.
 
-##XGB training
+## XGB training
 After tuning, XGB was trained and tested with the full set of preprocessed features. The results are the follwoing:
 | Metric   | XGBoost (All Features) |
 |----------|------------------------|

@@ -18,7 +18,7 @@ c. **Missing Value Handling**: Missing values were addressed through a multi-ste
     - The rest of the missing numerical values were imputed using the median strategy, chosen for its robustness to outliers.
 
 d. **Correlation Analysis**: A correlation analysis was performed to identify and mitigate multicollinearity. Features highly correlated (absolute correlation coefficient > 0.8) with other features (e.g., `mean_arterial_pressure`, `pulse_pressure`, some `_missing` flags) were removed to improve model stability and interpretability.
-![Alt text](HeartDiseaseMIMICPrediction/IMAGES/Absolute_Matrix_Correlation.png)
+![Alt text](IMAGES/Absolute_Matrix_Correlation.png)
 
 e. **Outlier Capping**: Outliers in continuous numerical features were capped using the Interquartile Range (IQR) method (5.0 times the IQR) to prevent extreme values from disproportionately influencing model training.
 
@@ -42,11 +42,11 @@ Optuna, an automatic hyperparameter optimization framework, was utilized for hyp
 
 ##XGB training
 After tuning, XGB was trained and tested with the full set of preprocessed features. The results are the follwoing:
-| Metric   | XGBoost (All Features) | XGBoost (Top 20 Features) |
-|----------|------------------------|---------------------------|
-| Accuracy | 0.8273                 | 0.8217                    |
-| F1-score | 0.8399                 | 0.8347                    |
-| AUC      | 0.9118                 | 0.9064                    |
+| Metric   | XGBoost (All Features) |
+|----------|------------------------|
+| Accuracy | 0.8273                 |
+| F1-score | 0.8399                 | 
+| AUC      | 0.9118                 |
 
 ROC curve:
 ![Alt text](IMAGES/Roc_curve_XGB.png)

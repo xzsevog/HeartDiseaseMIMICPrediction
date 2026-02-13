@@ -32,7 +32,7 @@ Before extensive tuning, an initial comparison of several machine learning model
 The models were evaluated based on Accuracy, F1-score, and AUC. This initial assessment helped in identifying promising candidates for further optimization, with XGBoost and Random Forest showing strong potential.
 ![Alt text](IMAGES/Compariosn_of_models_accuracy.png)
 
-##XGB VS RandomForest
+## XGB VS RandomForest
 To be more detailed, 2 selected models have been compared in 5-fold cross-validation. As seen on the fiugure, XGB was outperfmornig RandomForest in parameters Accuracy and AUC, but not in F1 - score.
 ![Alt text](IMAGES/XGB_vs_Random_Forest.png)
 Nevertheless, it was decided to do the final training with XGB as it has more hiperparameter to tune, and it's faster and more versatile model.
@@ -48,10 +48,9 @@ After tuning, XGB was trained and tested with the full set of preprocessed featu
 | F1-score | 0.8399                 | 
 | AUC      | 0.9118                 |
 
-ROC curve:
+
 ![Alt text](IMAGES/Roc_curve_XGB.png)
 
-Confusion Matrix:
 ![Alt text](IMAGES/Confusin_Matrix_XGB.png)
 
 ## Feature Selection
@@ -61,10 +60,10 @@ To potentially improve model performance and reduce complexity, feature selectio
 ## Comparison of XGBoost: All Features vs. Top 20 Features
 The XGBoost model was evaluated using both the full set of preprocessed features and the selected top 20 features. 
 
-ROC Curve
-![Alt text](IMAGES/Roc_curve_XGB_TOP 20.png)
 
-Confusion Matrix
+![Alt text](IMAGES/Roc_curve_XGB_TOP_20.png)
+
+
 ![Alt text](IMAGES/Confusin_Matrix_XGB_TOP20.png)
 
 The results are summarized below:

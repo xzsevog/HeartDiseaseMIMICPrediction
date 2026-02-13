@@ -1,6 +1,6 @@
 # HeartDiseaseMIMICPrediction
 
- Project: Heart Disease Prediction using MIMIC-III Dataset
+Project: Heart Disease Prediction using MIMIC-III Dataset
 
 ## Project Goal
 This project aims to predict the presence of heart disease using a comprehensive set of patient data from Kaggle (the MIMIC-III  database). The objective is to develop and evaluate machine learning models to accurately identify individuals at risk of heart disease, aiding in early diagnosis and intervention.
@@ -18,7 +18,7 @@ c. **Missing Value Handling**: Missing values were addressed through a multi-ste
     - The rest of the missing numerical values were imputed using the median strategy, chosen for its robustness to outliers.
 
 d. **Correlation Analysis**: A correlation analysis was performed to identify and mitigate multicollinearity. Features highly correlated (absolute correlation coefficient > 0.8) with other features (e.g., `mean_arterial_pressure`, `pulse_pressure`, some `_missing` flags) were removed to improve model stability and interpretability.
-![Alt text](IMAGES/Absolute Matrix Correlation.png)
+![Alt text](HeartDiseaseMIMICPrediction/IMAGES/Absolute_Matrix_Correlation.png)
 
 e. **Outlier Capping**: Outliers in continuous numerical features were capped using the Interquartile Range (IQR) method (5.0 times the IQR) to prevent extreme values from disproportionately influencing model training.
 
@@ -30,11 +30,11 @@ Before extensive tuning, an initial comparison of several machine learning model
 -   **MLP Classifier**
 
 The models were evaluated based on Accuracy, F1-score, and AUC. This initial assessment helped in identifying promising candidates for further optimization, with XGBoost and Random Forest showing strong potential.
-![Alt text](IMAGES/Compariosn of models accuracy.png)
+![Alt text](IMAGES/Compariosn_of_models_accuracy.png)
 
 ##XGB VS RandomForest
 To be more detailed, 2 selected models have been compared in 5-fold cross-validation. As seen on the fiugure, XGB was outperfmornig RandomForest in parameters Accuracy and AUC, but not in F1 - score.
-![Alt text](IMAGES/XGB vs Random Forest.png)
+![Alt text](IMAGES/XGB_vs_Random_Forest.png)
 Nevertheless, it was decided to do the final training with XGB as it has more hiperparameter to tune, and it's faster and more versatile model.
 
 ## Hyperparameter Tuning
@@ -49,23 +49,23 @@ After tuning, XGB was trained and tested with the full set of preprocessed featu
 | AUC      | 0.9118                 | 0.9064                    |
 
 ROC curve:
-![Alt text](IMAGES/Roc curve XGB.png)
+![Alt text](IMAGES/Roc_curve_XGB.png)
 
 Confusion Matrix:
-![Alt text](IMAGES/Confusin Matrix XGB.png)
+![Alt text](IMAGES/Confusin_Matrix_XGB.png)
 
 ## Feature Selection
 To potentially improve model performance and reduce complexity, feature selection was performed using XGBoost's gain importance. The **top 20 most important features** were identified and used to create a reduced dataset.
-![Alt text](IMAGES/TOP 20 features.png)
+![Alt text](IMAGES/TOP_20_features.png)
 
 ## Comparison of XGBoost: All Features vs. Top 20 Features
 The XGBoost model was evaluated using both the full set of preprocessed features and the selected top 20 features. 
 
 ROC Curve
-![Alt text](IMAGES/Roc curve XGB_TOP 20.png)
+![Alt text](IMAGES/Roc_curve_XGB_TOP 20.png)
 
 Confusion Matrix
-![Alt text](IMAGES/Confusin Matrix XGB_TOP2-.png)
+![Alt text](IMAGES/Confusin_Matrix_XGB_TOP20.png)
 
 The results are summarized below:
 

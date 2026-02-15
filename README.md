@@ -36,9 +36,10 @@ The models were evaluated based on Accuracy, F1-score, and AUC. This initial ass
 ![Alt text](IMAGES/Compariosn_of_models_accuracy.png)
 
 ## XGB VS RandomForest
-To be more detailed, 2 selected models have been compared in 5-fold cross-validation. As seen on the fiugure, XGB was outperfmornig RandomForest in parameters Accuracy and AUC, but not in F1 - score.
+A detailed comparison of the two selected models was conducted using 5-fold cross-validation. The results, presented in the figure, indicate that XGBoost achieved higher Accuracy and AUC values, whereas Random Forest performed better in terms of F1-score
 ![Alt text](IMAGES/XGB_vs_Random_Forest.png)
-Nevertheless, it was decided to do the final training with XGB as it has more hiperparameter to tune, and it's faster and more versatile model.
+
+Ultimately, XGBoost was chosen for the final model training because it provides broader hyperparameter optimization options while maintaining superior speed and versatility.
 
 ## Hyperparameter Tuning
 Optuna, an automatic hyperparameter optimization framework, was utilized for hyperparameter tuning. It was applied to both the Random Forest and XGBoost models to systematically search for the optimal set of parameters that maximize the Area Under the Receiver Operating Characteristic Curve (AUC) through cross-validation.
@@ -81,8 +82,8 @@ The results are summarized below:
 
 The analysis indicated that the XGBoost model performed slightly better when trained with **all preprocessed features** compared to the reduced set of top 20 features across all metrics. Although the performance difference is marginal, the full feature set provided a minor but consistent predictive advantage. Given that the increase in model complexity for this dataset size was acceptable, using all features was deemed beneficial.
 
-## Bonus: Model Comparison: Optimized XGBoost vs. Optimized Random Forest
-To confirm XGB was indeed correct choice - After hyperparameter tuning of both models, a final comparison was made between the optimized XGBoost and Random Forest models on the full feature set. The results are summarized below:
+## Post-Tuning Model Validation
+Although the baseline comparison indicated that XGBoost outperformed Random Forest, a final comparison was conducted after hyperparameter tuning of both models.The results are summarized below:
 
 | Metric   | XGBoost | Random Forest |
 |----------|---------|---------------|

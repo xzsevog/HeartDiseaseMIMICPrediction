@@ -1,6 +1,5 @@
 # HeartDiseaseMIMICPrediction
 
-Project: Heart Disease Prediction using MIMIC-III Dataset
 Link to collab for easy usage: https://colab.research.google.com/drive/1ZcyNRL6d72zmmFRqOhvgc7MDtZ3XTZFt?usp=sharing
 
 If you'd like to download to run the code in your enviroment, please use file HeartDiseaseClassificationProject.py.

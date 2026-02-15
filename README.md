@@ -2,7 +2,7 @@
 
 Link to collab for easy usage: https://colab.research.google.com/drive/1ZcyNRL6d72zmmFRqOhvgc7MDtZ3XTZFt?usp=sharing
 
-If you'd like to download to run the code in your enviroment, please use file HeartDiseaseClassificationProject.py.
+To run the project locally, download the repository and execute the file HeartDiseaseClassificationProject.py in your environment.
 
 ## Project Goal
 This project aims to predict the presence of heart disease using a comprehensive set of patient data from Kaggle (the MIMIC-III  database). The objective is to develop and evaluate machine learning models to accurately identify individuals at risk of heart disease, aiding in early diagnosis and intervention.
